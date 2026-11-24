@@ -1,12 +1,16 @@
-import type { GameItem } from '../types';
-
-export function rankGameSearch(games: GameItem[], rawQuery: string): GameItem[] {
+/**
+ * @param {import('../types').GameItem[]} games
+ * @param {string} rawQuery
+ * @returns {import('../types').GameItem[]}
+ */
+export function rankGameSearch(games, rawQuery) {
   const q = rawQuery.trim().toLowerCase();
   if (!q) return [];
 
   const tokens = q.split(/\s+/).filter(Boolean);
 
-  const scored: Array<{ game: GameItem; score: number }> = [];
+  /** @type {Array<{ game: import('../types').GameItem, score: number }>} */
+  const scored = [];
   for (const game of games) {
     const nameLower = game.name.toLowerCase();
     const authorLower = game.author.toLowerCase();

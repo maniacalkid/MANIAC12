@@ -1,0 +1,54 @@
+/* Dedicated CSS stylesheet for MANIAC12 glass gradients, intro styling, and theme spectrum */
+
+.accent-gradient-btn {
+  background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+  color: var(--accent-contrast);
+}
+
+.hero-title-gradient {
+  font-size: clamp(3.15rem, 8.2vw, 6.25rem);
+  background-image: linear-gradient(
+    135deg,
+    var(--text-primary) 18%,
+    var(--accent-primary) 65%,
+    var(--accent-secondary) 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  filter: drop-shadow(0 14px 32px rgba(0, 0, 0, 0.25));
+}
+
+.hue-spectrum-track {
+  background: linear-gradient(
+    90deg,
+    hsl(0 90% 58%),
+    hsl(60 90% 55%),
+    hsl(120 85% 50%),
+    hsl(180 88% 52%),
+    hsl(240 90% 62%),
+    hsl(300 88% 58%),
+    hsl(359 90% 58%)
+  );
+}
+
+.intro-video-frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 177.78vh;
+  min-width: 100%;
+  height: 56.25vw;
+  min-height: 100%;
+  border: 0;
+}
+
+.intro-logo-text {
+  font-size: clamp(2.85rem, 9.5vw, 6.75rem);
+  text-shadow: 0 0 28px rgba(255, 255, 255, 0.45), 0 12px 36px rgba(0, 0, 0, 0.75);
+}
+
+.intro-percent-counter {
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.75);
+}

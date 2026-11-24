@@ -1,6 +1,5 @@
-import type { ColorPreset } from '../types';
-
-export const COLOR_PRESETS: ColorPreset[] = [
+/** @type {import('../types').ColorPreset[]} */
+export const COLOR_PRESETS = [
   {
     id: 'liquid-cobalt',
     name: 'liquid cobalt',
@@ -63,11 +62,10 @@ export const COLOR_PRESETS: ColorPreset[] = [
   },
 ];
 
-export function applyColorTheme(options: {
-  presetId: string;
-  customHue: number | null;
-  surfaceMode: 'dark' | 'light';
-}) {
+/**
+ * @param {{ presetId: string, customHue: number | null, surfaceMode: 'dark' | 'light' }} options
+ */
+export function applyColorTheme(options) {
   const root = document.documentElement;
   const preset =
     COLOR_PRESETS.find((item) => item.id === options.presetId) ?? COLOR_PRESETS[0];

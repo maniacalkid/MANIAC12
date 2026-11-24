@@ -1,35 +1,31 @@
-import type {
-  ChatSource,
-  DdgSearchResponse,
-  DdgWebResult,
-  GameItem,
-  SuggestedGame,
-} from '../types';
 import { rankGameSearch } from './searchGames';
-
-declare global {
-  interface Window {
-    __MANIAC12_STANDALONE__?: boolean;
-  }
-}
 
 export const IS_STANDALONE =
   typeof window !== 'undefined' &&
-  (window.__MANIAC12_STANDALONE__ === true ||
+  (/** @type {any} */ (window).__MANIAC12_STANDALONE__ === true ||
     window.location.protocol === 'file:' ||
     window.location.protocol === 'about:' ||
     window.location.protocol === 'blob:');
 
-export function getGameCoverUrl(game: GameItem): string {
+/**
+ * @param {import('../types').GameItem} game
+ * @returns {string}
+ */
+export function getGameCoverUrl(game) {
   if (IS_STANDALONE && game.coverFile) {
     return `https://raw.githubusercontent.com/gn-math/covers/main/${encodeURIComponent(game.coverFile)}`;
   }
   return game.cover;
 }
 
-const standaloneHtmlCache = new Map<string, string>();
+/** @type {Map<string, string>} */
+const standaloneHtmlCache = new Map();
 
-export async function fetchStandaloneGameHtml(file: string): Promise<string> {
+/**
+ * @param {string} file
+ * @returns {Promise<string>}
+ */
+export async function fetchStandaloneGameHtml(file) {
   const cached = standaloneHtmlCache.get(file);
   if (cached) return cached;
 
@@ -62,7 +58,11 @@ export async function fetchStandaloneGameHtml(file: string): Promise<string> {
   return html;
 }
 
-export async function suggestWebStandalone(query: string): Promise<string[]> {
+/**
+ * @param {string} query
+ * @returns {Promise<string[]>}
+ */
+export async function suggestWebStandalone(query) {
   const trimmed = query.trim();
   if (!trimmed) return [];
 
@@ -71,50 +71,46 @@ export async function suggestWebStandalone(query: string): Promise<string[]> {
       `https://en.wikipedia.org/w/api.php?action=opensearch&search=${encodeURIComponent(trimmed)}&limit=6&namespace=0&format=json&origin=*`
     );
     if (!res.ok) return [];
-    const data = (await res.json()) as [string, string[]];
+    const data = await res.json();
     return Array.isArray(data[1]) ? data[1].slice(0, 6) : [];
   } catch {
     return [];
   }
 }
 
-export async function searchWebStandalone(query: string): Promise<DdgSearchResponse> {
+/**
+ * @param {string} query
+ * @returns {Promise<import('../types').DdgSearchResponse>}
+ */
+export async function searchWebStandalone(query) {
   const trimmed = query.trim();
   const [ddgSettled, wikiSettled] = await Promise.allSettled([
     fetch(
       `https://api.duckduckgo.com/?q=${encodeURIComponent(trimmed)}&format=json&no_html=1&skip_disambig=1`
     ).then(async (r) => {
       if (!r.ok) throw new Error('ddg instant api unavailable');
-      return (await r.json()) as {
-        Heading?: string;
-        AbstractText?: string;
-        AbstractURL?: string;
-        AbstractSource?: string;
-        Image?: string;
-        RelatedTopics?: Array<{
-          Text?: string;
-          FirstURL?: string;
-          Topics?: Array<{ Text?: string; FirstURL?: string }>;
-        }>;
-      };
+      return r.json();
     }),
     fetch(
       `https://en.wikipedia.org/w/api.php?action=opensearch&search=${encodeURIComponent(trimmed)}&limit=8&namespace=0&format=json&origin=*`
     ).then(async (r) => {
       if (!r.ok) throw new Error('wiki opensearch unavailable');
-      return (await r.json()) as [string, string[], string[], string[]];
+      return r.json();
     }),
   ]);
 
-  let instantAnswer: DdgSearchResponse['instantAnswer'];
-  const relatedTopics: Array<{ text: string; url: string }> = [];
-  const results: DdgWebResult[] = [];
-  const seenUrls = new Set<string>();
+  /** @type {import('../types').DdgSearchResponse['instantAnswer']} */
+  let instantAnswer;
+  /** @type {Array<{ text: string, url: string }>} */
+  const relatedTopics = [];
+  /** @type {import('../types').DdgWebResult[]} */
+  const results = [];
+  const seenUrls = new Set();
 
   if (ddgSettled.status === 'fulfilled') {
     const ddg = ddgSettled.value;
     if (ddg.AbstractText && ddg.AbstractURL) {
-      let img: string | undefined;
+      let img;
       if (ddg.Image) {
         img = ddg.Image.startsWith('http')
           ? ddg.Image
@@ -186,7 +182,11 @@ export async function searchWebStandalone(query: string): Promise<DdgSearchRespo
   };
 }
 
-function tryEvalSimpleMath(text: string): string | null {
+/**
+ * @param {string} text
+ * @returns {string | null}
+ */
+function tryEvalSimpleMath(text) {
   const cleaned = text
     .toLowerCase()
     .replace(/^(what is|whats|what's|calculate|solve|eval)\s+/i, '')
@@ -208,24 +208,20 @@ function tryEvalSimpleMath(text: string): string | null {
   return null;
 }
 
-export async function chatStandalone(
-  userText: string,
-  games: GameItem[]
-): Promise<{
-  reply: string;
-  sources?: ChatSource[];
-  suggestedGames?: SuggestedGame[];
-}> {
+/**
+ * @param {string} userText
+ * @param {import('../types').GameItem[]} games
+ * @returns {Promise<{ reply: string, sources?: import('../types').ChatSource[], suggestedGames?: import('../types').SuggestedGame[] }>}
+ */
+export async function chatStandalone(userText, games) {
   const trimmed = userText.trim().toLowerCase();
 
-  // Quick greeting handling
   if (/^(yo+|hi+|hey+|sup|wsg|hola|hello)[!.\s]*$/.test(trimmed)) {
     return {
       reply: `yooo wsg! running in standalone html mode rn — ask me about any of our ${games.length} games, math, or look up random facts fr.`,
     };
   }
 
-  // Simple math evaluator
   const mathAnswer = tryEvalSimpleMath(trimmed);
   if (mathAnswer) {
     return {
@@ -233,7 +229,6 @@ export async function chatStandalone(
     };
   }
 
-  // Game query check
   const isGameQuery =
     /\b(game|games|play|arcade|platformer|puzzle|horror|fnaf|minecraft|mario|retro|emulator|roblox|fnf|ovo|shooter|racing|sports|unblocked|maniac12|gn-math|recommend|put me on|banger)\b/i.test(
       trimmed
@@ -260,7 +255,6 @@ export async function chatStandalone(
     };
   }
 
-  // General topic lookup via Wikipedia OpenSearch + Summary (works over CORS in static HTML)
   const topicQuery = trimmed
     .replace(/^(who is|who was|what is|what are|explain|tell me about|how does|how do|define)\s+/i, '')
     .replace(/\b(like im 5|simply|briefly|rn|fr|pls|please)\b/gi, '')
@@ -272,17 +266,13 @@ export async function chatStandalone(
       `https://en.wikipedia.org/w/api.php?action=opensearch&search=${encodeURIComponent(topicQuery || trimmed)}&limit=3&namespace=0&format=json&origin=*`
     );
     if (searchRes.ok) {
-      const [, titles, , urls] = (await searchRes.json()) as [string, string[], string[], string[]];
+      const [, titles, , urls] = await searchRes.json();
       if (titles && titles[0]) {
         const summaryRes = await fetch(
           `https://en.wikipedia.org/api/rest_v1/page/summary/${encodeURIComponent(titles[0])}`
         );
         if (summaryRes.ok) {
-          const summary = (await summaryRes.json()) as {
-            title?: string;
-            extract?: string;
-            content_urls?: { desktop?: { page?: string } };
-          };
+          const summary = await summaryRes.json();
           if (summary.extract) {
             const url = summary.content_urls?.desktop?.page || urls?.[0];
             return {
@@ -299,7 +289,6 @@ export async function chatStandalone(
     // Fallback below
   }
 
-  // Fallback: check if query matches a game title directly
   const fallbackGames = rankGameSearch(games, trimmed).slice(0, 3);
   if (fallbackGames.length > 0) {
     return {

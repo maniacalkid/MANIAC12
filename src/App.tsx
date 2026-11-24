@@ -11,6 +11,7 @@ import { GameSearchModal } from './components/GameSearchModal';
 import { AiChatbot } from './components/AiChatbot';
 import { RainBackground, detectDeviceCapabilityIssue } from './components/RainBackground';
 import { LoadingScreen } from './components/LoadingScreen';
+import { FpsCounter } from './components/FpsCounter';
 import { rankGameSearch } from './utils/searchGames';
 import { IS_STANDALONE } from './utils/runtime';
 
@@ -309,6 +310,8 @@ export default function App() {
           style={{ backgroundColor: 'var(--orb-3)' }}
         />
       </div>
+
+      <FpsCounter />
 
       <LoadingScreen
         isVisible={showLoadingScreen}

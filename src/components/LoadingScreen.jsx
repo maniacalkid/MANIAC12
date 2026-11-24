@@ -1,16 +1,14 @@
 import { useEffect, useState } from 'react';
 import { AnimatePresence, motion, useReducedMotion } from 'motion/react';
 
-interface LoadingScreenProps {
-  isVisible: boolean;
-  onFinish: () => void;
-}
-
 const SPLASH_DURATION_MS = 5000;
 const YOUTUBE_VIDEO_ID = 'eCHaiEjCDFM';
 const YOUTUBE_EMBED_URL = `https://www.youtube-nocookie.com/embed/${YOUTUBE_VIDEO_ID}?autoplay=1&mute=1&controls=0&rel=0&modestbranding=1&playsinline=1&start=0&end=5&loop=1&playlist=${YOUTUBE_VIDEO_ID}&disablekb=1&fs=0&iv_load_policy=3`;
 
-export function LoadingScreen({ isVisible, onFinish }: LoadingScreenProps) {
+/**
+ * @param {{ isVisible: boolean, onFinish: () => void }} props
+ */
+export function LoadingScreen({ isVisible, onFinish }) {
   const prefersReducedMotion = useReducedMotion();
   const [percent, setPercent] = useState(0);
 
@@ -20,7 +18,7 @@ export function LoadingScreen({ isVisible, onFinish }: LoadingScreenProps) {
     const startTime = performance.now();
     let rafId = 0;
 
-    const tick = (now: number) => {
+    const tick = (now) => {
       const elapsed = now - startTime;
       const next = Math.min(100, Math.floor((elapsed / SPLASH_DURATION_MS) * 100));
       setPercent((prev) => (prev === next ? prev : next));
@@ -69,7 +67,7 @@ export function LoadingScreen({ isVisible, onFinish }: LoadingScreenProps) {
                 title="maniac12 intro background video"
                 allow="autoplay; encrypted-media"
                 tabIndex={-1}
-                className="pointer-events-none absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[177.78vh] min-w-full h-[56.25vw] min-h-full border-0"
+                className="intro-video-frame pointer-events-none"
               />
             </div>
           </div>
@@ -101,12 +99,7 @@ export function LoadingScreen({ isVisible, onFinish }: LoadingScreenProps) {
                       ease: 'easeInOut',
                     }
               }
-              className="font-display font-black tracking-[0.12em] leading-none text-white select-none lowercase"
-              style={{
-                fontSize: 'clamp(2.85rem, 9.5vw, 6.75rem)',
-                textShadow:
-                  '0 0 28px rgba(255, 255, 255, 0.45), 0 12px 36px rgba(0, 0, 0, 0.75)',
-              }}
+              className="intro-logo-text font-display font-black tracking-[0.12em] leading-none text-white select-none lowercase"
             >
               maniac12
             </motion.h1>
@@ -120,8 +113,7 @@ export function LoadingScreen({ isVisible, onFinish }: LoadingScreenProps) {
           {/* Bottom-left percentage counter */}
           <div
             aria-live="off"
-            className="pointer-events-none absolute bottom-5 left-5 sm:bottom-6 sm:left-6 z-10 font-mono-tabular text-sm sm:text-base font-semibold tracking-wider text-white/90 select-none lowercase"
-            style={{ textShadow: '0 2px 10px rgba(0, 0, 0, 0.75)' }}
+            className="intro-percent-counter pointer-events-none absolute bottom-5 left-5 sm:bottom-6 sm:left-6 z-10 font-mono-tabular text-sm sm:text-base font-semibold tracking-wider text-white/90 select-none lowercase"
           >
             {percent}%
           </div>

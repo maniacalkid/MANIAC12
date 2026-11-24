@@ -19,7 +19,7 @@ export function TopBar({ onQuickPlay, onOpenChat, onOpenSearch }: TopBarProps) {
           ? { duration: 0 }
           : { type: 'spring', stiffness: 260, damping: 22 }
       }
-      className="sticky top-0 z-40 w-full px-4 sm:px-6 pt-3"
+      className="sticky top-0 z-40 w-full pl-[5.5rem] pr-4 sm:pl-24 sm:pr-6 2xl:px-6 pt-3"
     >
       <div className="mx-auto max-w-7xl h-14 px-5 rounded-2xl liquid-glass flex items-center justify-between gap-8">
         {/* Zone 1: Single text element wordmark */}

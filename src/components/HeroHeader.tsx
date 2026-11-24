@@ -149,16 +149,7 @@ export function HeroHeader({
             }
           >
             <h1
-              className="font-display font-black tracking-[0.06em] leading-[0.95] select-none lowercase"
-              style={{
-                fontSize: 'clamp(3.15rem, 8.2vw, 6.25rem)',
-                backgroundImage:
-                  'linear-gradient(135deg, var(--text-primary) 18%, var(--accent-primary) 65%, var(--accent-secondary) 100%)',
-                WebkitBackgroundClip: 'text',
-                backgroundClip: 'text',
-                color: 'transparent',
-                filter: 'drop-shadow(0 14px 32px rgba(0, 0, 0, 0.25))',
-              }}
+              className="hero-title-gradient font-display font-black tracking-[0.06em] leading-[0.95] select-none lowercase"
             >
               maniac12
             </h1>
@@ -611,11 +602,7 @@ export function HeroHeader({
               max={359}
               value={displayHue}
               onChange={(e) => onChangeHue(Number(e.target.value))}
-              className="w-full h-2.5 rounded-full appearance-none cursor-pointer"
-              style={{
-                background:
-                  'linear-gradient(90deg, hsl(0 90% 58%), hsl(60 90% 55%), hsl(120 85% 50%), hsl(180 88% 52%), hsl(240 90% 62%), hsl(300 88% 58%), hsl(359 90% 58%))',
-              }}
+              className="hue-spectrum-track w-full h-2.5 rounded-full appearance-none cursor-pointer"
             />
           </div>
 
