@@ -1,0 +1,6 @@
+{
+  "name": "MANIAC12",
+  "description": "Liquid glass unblocked game hub powered by gn-math/html with dynamic color themes and an integrated AI gaming assistant.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
