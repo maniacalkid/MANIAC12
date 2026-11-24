@@ -12743,5 +12743,548 @@
     "githubUrl": "https://github.com/gn-math/html/blob/main/882.html",
     "iframeSrc": "/api/play/882.html",
     "iframe": "<iframe src=\"/api/play/882.html\" title=\"Minecraft: Story Mode\" class=\"w-full h-full border-0\" allow=\"autoplay; fullscreen; gamepad; pointer-lock\" allowfullscreen loading=\"lazy\"></iframe>"
+  },
+  {
+    "id": 883,
+    "name": "Baldi's Basics Birthday Bash",
+    "author": "crackers",
+    "category": "Ports & 3D",
+    "tags": [
+      "wasm.rip",
+      "wasm",
+      "ports & 3d"
+    ],
+    "featured": false,
+    "file": "",
+    "coverFile": "",
+    "cover": "https://wasm.rip/img/bdaybash.png",
+    "githubUrl": "https://github.com/wasmdotrip",
+    "iframeSrc": "https://wasm.rip/files/birthdaybash/index.html",
+    "iframe": "<iframe src=\"https://wasm.rip/files/birthdaybash/index.html\" title=\"Baldi's Basics Birthday Bash\" class=\"w-full h-full border-0\" allow=\"autoplay; fullscreen; gamepad; pointer-lock\" allowfullscreen loading=\"lazy\"></iframe>"
+  },
+  {
+    "id": 884,
+    "name": "Boil Noodles at Night",
+    "author": "sexyplankton",
+    "category": "Ports & 3D",
+    "tags": [
+      "wasm.rip",
+      "wasm",
+      "ports & 3d"
+    ],
+    "featured": false,
+    "file": "",
+    "coverFile": "",
+    "cover": "https://wasm.rip/img/noodle.png",
+    "githubUrl": "https://github.com/wasmdotrip",
+    "iframeSrc": "https://wasm.rip/files/boilnoodles/index.html",
+    "iframe": "<iframe src=\"https://wasm.rip/files/boilnoodles/index.html\" title=\"Boil Noodles at Night\" class=\"w-full h-full border-0\" allow=\"autoplay; fullscreen; gamepad; pointer-lock\" allowfullscreen loading=\"lazy\"></iframe>"
+  },
+  {
+    "id": 885,
+    "name": "Brotato Paws n' Claws",
+    "author": "dude",
+    "category": "Action & Arcade",
+    "tags": [
+      "wasm.rip",
+      "wasm",
+      "action & arcade"
+    ],
+    "featured": false,
+    "file": "",
+    "coverFile": "",
+    "cover": "https://wasm.rip/img/bpac.png",
+    "githubUrl": "https://github.com/wasmdotrip",
+    "iframeSrc": "https://wasm.rip/files/bpac/index.html",
+    "iframe": "<iframe src=\"https://wasm.rip/files/bpac/index.html\" title=\"Brotato Paws n' Claws\" class=\"w-full h-full border-0\" allow=\"autoplay; fullscreen; gamepad; pointer-lock\" allowfullscreen loading=\"lazy\"></iframe>"
+  },
+  {
+    "id": 886,
+    "name": "The Man From The Window 2",
+    "author": "dude",
+    "category": "Ports & 3D",
+    "tags": [
+      "wasm.rip",
+      "wasm",
+      "ports & 3d"
+    ],
+    "featured": false,
+    "file": "",
+    "coverFile": "",
+    "cover": "https://wasm.rip/img/The_Man_from_the_Window_2_29.webp",
+    "githubUrl": "https://github.com/wasmdotrip",
+    "iframeSrc": "https://wasm.rip/files/MFDW2/index.html",
+    "iframe": "<iframe src=\"https://wasm.rip/files/MFDW2/index.html\" title=\"The Man From The Window 2\" class=\"w-full h-full border-0\" allow=\"autoplay; fullscreen; gamepad; pointer-lock\" allowfullscreen loading=\"lazy\"></iframe>"
+  },
+  {
+    "id": 887,
+    "name": "Fez",
+    "author": "gurtmuncher",
+    "category": "Platform & Runner",
+    "tags": [
+      "wasm.rip",
+      "wasm",
+      "platform & runner"
+    ],
+    "featured": false,
+    "file": "",
+    "coverFile": "",
+    "cover": "https://wasm.rip/img/FEZ.png",
+    "githubUrl": "https://github.com/wasmdotrip",
+    "iframeSrc": "https://wasm.rip/files/FEZ/fez.html",
+    "iframe": "<iframe src=\"https://wasm.rip/files/FEZ/fez.html\" title=\"Fez\" class=\"w-full h-full border-0\" allow=\"autoplay; fullscreen; gamepad; pointer-lock\" allowfullscreen loading=\"lazy\"></iframe>"
+  },
+  {
+    "id": 888,
+    "name": "Azahar",
+    "author": "sexyplankton",
+    "category": "Retro & Emulators",
+    "tags": [
+      "wasm.rip",
+      "wasm",
+      "retro & emulators"
+    ],
+    "featured": true,
+    "file": "",
+    "coverFile": "",
+    "cover": "https://wasm.rip/img/aza.png",
+    "githubUrl": "https://github.com/wasmdotrip",
+    "iframeSrc": "https://wasm.rip/files/Azahar/index.html",
+    "iframe": "<iframe src=\"https://wasm.rip/files/Azahar/index.html\" title=\"Azahar\" class=\"w-full h-full border-0\" allow=\"autoplay; fullscreen; gamepad; pointer-lock\" allowfullscreen loading=\"lazy\"></iframe>"
+  },
+  {
+    "id": 889,
+    "name": "Happy Room",
+    "author": "gurtmuncher",
+    "category": "Action & Arcade",
+    "tags": [
+      "wasm.rip",
+      "wasm",
+      "action & arcade"
+    ],
+    "featured": false,
+    "file": "",
+    "coverFile": "",
+    "cover": "https://wasm.rip/img/happy-room.png",
+    "githubUrl": "https://github.com/wasmdotrip",
+    "iframeSrc": "https://wasm.rip/files/happy-room/index.html",
+    "iframe": "<iframe src=\"https://wasm.rip/files/happy-room/index.html\" title=\"Happy Room\" class=\"w-full h-full border-0\" allow=\"autoplay; fullscreen; gamepad; pointer-lock\" allowfullscreen loading=\"lazy\"></iframe>"
+  },
+  {
+    "id": 890,
+    "name": "While True: Learn()",
+    "author": "dasher",
+    "category": "Puzzle & Strategy",
+    "tags": [
+      "wasm.rip",
+      "wasm",
+      "puzzle & strategy"
+    ],
+    "featured": false,
+    "file": "",
+    "coverFile": "",
+    "cover": "https://wasm.rip/img/wtl.png",
+    "githubUrl": "https://github.com/wasmdotrip",
+    "iframeSrc": "https://wasm.rip/files/wtl/index.html",
+    "iframe": "<iframe src=\"https://wasm.rip/files/wtl/index.html\" title=\"While True: Learn()\" class=\"w-full h-full border-0\" allow=\"autoplay; fullscreen; gamepad; pointer-lock\" allowfullscreen loading=\"lazy\"></iframe>"
+  },
+  {
+    "id": 891,
+    "name": "Plauge Inc",
+    "author": "reeyuki",
+    "category": "Puzzle & Strategy",
+    "tags": [
+      "wasm.rip",
+      "wasm",
+      "puzzle & strategy"
+    ],
+    "featured": false,
+    "file": "",
+    "coverFile": "",
+    "cover": "https://wasm.rip/img/plauge.png",
+    "githubUrl": "https://github.com/wasmdotrip",
+    "iframeSrc": "https://wasm.rip/files/plauge/index.html",
+    "iframe": "<iframe src=\"https://wasm.rip/files/plauge/index.html\" title=\"Plauge Inc\" class=\"w-full h-full border-0\" allow=\"autoplay; fullscreen; gamepad; pointer-lock\" allowfullscreen loading=\"lazy\"></iframe>"
+  },
+  {
+    "id": 892,
+    "name": "Among Us",
+    "author": "wasm.rip team",
+    "category": "Ports & 3D",
+    "tags": [
+      "wasm.rip",
+      "wasm",
+      "ports & 3d"
+    ],
+    "featured": true,
+    "file": "",
+    "coverFile": "",
+    "cover": "https://wasm.rip/img/amongus.webp",
+    "githubUrl": "https://github.com/wasmdotrip",
+    "iframeSrc": "https://wasm.rip/files/amongus/index.html",
+    "iframe": "<iframe src=\"https://wasm.rip/files/amongus/index.html\" title=\"Among Us\" class=\"w-full h-full border-0\" allow=\"autoplay; fullscreen; gamepad; pointer-lock\" allowfullscreen loading=\"lazy\"></iframe>"
+  },
+  {
+    "id": 893,
+    "name": "GTA 3",
+    "author": "shxyder",
+    "category": "Ports & 3D",
+    "tags": [
+      "wasm.rip",
+      "wasm",
+      "ports & 3d"
+    ],
+    "featured": true,
+    "file": "",
+    "coverFile": "",
+    "cover": "https://wasm.rip/img/gta3.png",
+    "githubUrl": "https://github.com/wasmdotrip",
+    "iframeSrc": "https://wasm.rip/files/gta3/index.html",
+    "iframe": "<iframe src=\"https://wasm.rip/files/gta3/index.html\" title=\"GTA 3\" class=\"w-full h-full border-0\" allow=\"autoplay; fullscreen; gamepad; pointer-lock\" allowfullscreen loading=\"lazy\"></iframe>"
+  },
+  {
+    "id": 894,
+    "name": "How To Fish",
+    "author": "NotRexed",
+    "category": "Ports & 3D",
+    "tags": [
+      "wasm.rip",
+      "wasm",
+      "ports & 3d"
+    ],
+    "featured": true,
+    "file": "",
+    "coverFile": "",
+    "cover": "https://wasm.rip/img/fish.png",
+    "githubUrl": "https://github.com/wasmdotrip",
+    "iframeSrc": "https://wasm.rip/files/HowToFish/HowToFish.html",
+    "iframe": "<iframe src=\"https://wasm.rip/files/HowToFish/HowToFish.html\" title=\"How To Fish\" class=\"w-full h-full border-0\" allow=\"autoplay; fullscreen; gamepad; pointer-lock\" allowfullscreen loading=\"lazy\"></iframe>"
+  },
+  {
+    "id": 895,
+    "name": "Global Strike (CS 1.6)",
+    "author": "crackers",
+    "category": "Action & Arcade",
+    "tags": [
+      "wasm.rip",
+      "wasm",
+      "action & arcade"
+    ],
+    "featured": false,
+    "file": "",
+    "coverFile": "",
+    "cover": "https://wasm.rip/img/cstrike.jpg",
+    "githubUrl": "https://github.com/wasmdotrip",
+    "iframeSrc": "https://wasm.rip/files/gstrike/index.html",
+    "iframe": "<iframe src=\"https://wasm.rip/files/gstrike/index.html\" title=\"Global Strike (CS 1.6)\" class=\"w-full h-full border-0\" allow=\"autoplay; fullscreen; gamepad; pointer-lock\" allowfullscreen loading=\"lazy\"></iframe>"
+  },
+  {
+    "id": 896,
+    "name": "Crashout Crew",
+    "author": "x8r",
+    "category": "Action & Arcade",
+    "tags": [
+      "wasm.rip",
+      "wasm",
+      "action & arcade"
+    ],
+    "featured": false,
+    "file": "",
+    "coverFile": "",
+    "cover": "https://wasm.rip/img/cc.jpg",
+    "githubUrl": "https://github.com/wasmdotrip",
+    "iframeSrc": "https://wasm.rip/files/cc/index.html",
+    "iframe": "<iframe src=\"https://wasm.rip/files/cc/index.html\" title=\"Crashout Crew\" class=\"w-full h-full border-0\" allow=\"autoplay; fullscreen; gamepad; pointer-lock\" allowfullscreen loading=\"lazy\"></iframe>"
+  },
+  {
+    "id": 897,
+    "name": "Rimworld",
+    "author": "sexyplankton",
+    "category": "Puzzle & Strategy",
+    "tags": [
+      "wasm.rip",
+      "wasm",
+      "puzzle & strategy"
+    ],
+    "featured": false,
+    "file": "",
+    "coverFile": "",
+    "cover": "https://wasm.rip/img/rim.png",
+    "githubUrl": "https://github.com/wasmdotrip",
+    "iframeSrc": "https://wasm.rip/files/rimworld/index.html",
+    "iframe": "<iframe src=\"https://wasm.rip/files/rimworld/index.html\" title=\"Rimworld\" class=\"w-full h-full border-0\" allow=\"autoplay; fullscreen; gamepad; pointer-lock\" allowfullscreen loading=\"lazy\"></iframe>"
+  },
+  {
+    "id": 898,
+    "name": "The Message From Deep space",
+    "author": "dasher",
+    "category": "Ports & 3D",
+    "tags": [
+      "wasm.rip",
+      "wasm",
+      "ports & 3d"
+    ],
+    "featured": false,
+    "file": "",
+    "coverFile": "",
+    "cover": "https://wasm.rip/img/tmfds.jpg",
+    "githubUrl": "https://github.com/wasmdotrip",
+    "iframeSrc": "https://wasm.rip/files/TMFDS/index.html",
+    "iframe": "<iframe src=\"https://wasm.rip/files/TMFDS/index.html\" title=\"The Message From Deep space\" class=\"w-full h-full border-0\" allow=\"autoplay; fullscreen; gamepad; pointer-lock\" allowfullscreen loading=\"lazy\"></iframe>"
+  },
+  {
+    "id": 899,
+    "name": "Dude, Stop",
+    "author": "dasher",
+    "category": "Puzzle & Strategy",
+    "tags": [
+      "wasm.rip",
+      "wasm",
+      "puzzle & strategy"
+    ],
+    "featured": false,
+    "file": "",
+    "coverFile": "",
+    "cover": "https://wasm.rip/img/dudestop.webp",
+    "githubUrl": "https://github.com/wasmdotrip",
+    "iframeSrc": "https://wasm.rip/files/dudestop/index.html",
+    "iframe": "<iframe src=\"https://wasm.rip/files/dudestop/index.html\" title=\"Dude, Stop\" class=\"w-full h-full border-0\" allow=\"autoplay; fullscreen; gamepad; pointer-lock\" allowfullscreen loading=\"lazy\"></iframe>"
+  },
+  {
+    "id": 900,
+    "name": "Kerbal Space Program",
+    "author": "crackers",
+    "category": "Ports & 3D",
+    "tags": [
+      "wasm.rip",
+      "wasm",
+      "ports & 3d"
+    ],
+    "featured": true,
+    "file": "",
+    "coverFile": "",
+    "cover": "https://wasm.rip/img/ksp.jpg",
+    "githubUrl": "https://github.com/wasmdotrip",
+    "iframeSrc": "https://ksp.ishotupa.school/",
+    "iframe": "<iframe src=\"https://ksp.ishotupa.school/\" title=\"Kerbal Space Program\" class=\"w-full h-full border-0\" allow=\"autoplay; fullscreen; gamepad; pointer-lock\" allowfullscreen loading=\"lazy\"></iframe>"
+  },
+  {
+    "id": 901,
+    "name": "Hill Climb Racing",
+    "author": "NotRexed",
+    "category": "Sports & Arcade",
+    "tags": [
+      "wasm.rip",
+      "wasm",
+      "sports & arcade"
+    ],
+    "featured": false,
+    "file": "",
+    "coverFile": "",
+    "cover": "https://wasm.rip/img/hcr.png",
+    "githubUrl": "https://github.com/wasmdotrip",
+    "iframeSrc": "https://wasm.rip/files/hcr/index.html",
+    "iframe": "<iframe src=\"https://wasm.rip/files/hcr/index.html\" title=\"Hill Climb Racing\" class=\"w-full h-full border-0\" allow=\"autoplay; fullscreen; gamepad; pointer-lock\" allowfullscreen loading=\"lazy\"></iframe>"
+  },
+  {
+    "id": 902,
+    "name": "Toasterball",
+    "author": "dasher",
+    "category": "Sports & Arcade",
+    "tags": [
+      "wasm.rip",
+      "wasm",
+      "sports & arcade"
+    ],
+    "featured": false,
+    "file": "",
+    "coverFile": "",
+    "cover": "https://wasm.rip/img/toasterball.png",
+    "githubUrl": "https://github.com/wasmdotrip",
+    "iframeSrc": "https://wasm.rip/files/toasterball/index.html",
+    "iframe": "<iframe src=\"https://wasm.rip/files/toasterball/index.html\" title=\"Toasterball\" class=\"w-full h-full border-0\" allow=\"autoplay; fullscreen; gamepad; pointer-lock\" allowfullscreen loading=\"lazy\"></iframe>"
+  },
+  {
+    "id": 903,
+    "name": "Superflight",
+    "author": "zay",
+    "category": "Ports & 3D",
+    "tags": [
+      "wasm.rip",
+      "wasm",
+      "ports & 3d"
+    ],
+    "featured": false,
+    "file": "",
+    "coverFile": "",
+    "cover": "https://wasm.rip/img/superflight.png",
+    "githubUrl": "https://github.com/wasmdotrip",
+    "iframeSrc": "https://wasm.rip/files/superflight/index.html",
+    "iframe": "<iframe src=\"https://wasm.rip/files/superflight/index.html\" title=\"Superflight\" class=\"w-full h-full border-0\" allow=\"autoplay; fullscreen; gamepad; pointer-lock\" allowfullscreen loading=\"lazy\"></iframe>"
+  },
+  {
+    "id": 904,
+    "name": "Keep Talking And Nobody Explodes",
+    "author": "zay",
+    "category": "Puzzle & Strategy",
+    "tags": [
+      "wasm.rip",
+      "wasm",
+      "puzzle & strategy"
+    ],
+    "featured": false,
+    "file": "",
+    "coverFile": "",
+    "cover": "https://wasm.rip/img/ktane.png",
+    "githubUrl": "https://github.com/wasmdotrip",
+    "iframeSrc": "https://wasm.rip/files/ktane/index.html",
+    "iframe": "<iframe src=\"https://wasm.rip/files/ktane/index.html\" title=\"Keep Talking And Nobody Explodes\" class=\"w-full h-full border-0\" allow=\"autoplay; fullscreen; gamepad; pointer-lock\" allowfullscreen loading=\"lazy\"></iframe>"
+  },
+  {
+    "id": 905,
+    "name": "Horsey Game",
+    "author": "crackers",
+    "category": "Ports & 3D",
+    "tags": [
+      "wasm.rip",
+      "wasm",
+      "ports & 3d"
+    ],
+    "featured": false,
+    "file": "",
+    "coverFile": "",
+    "cover": "https://wasm.rip/img/horsey.jpg",
+    "githubUrl": "https://github.com/wasmdotrip",
+    "iframeSrc": "https://woahhcrackers.github.io/HorseyGameWeb",
+    "iframe": "<iframe src=\"https://woahhcrackers.github.io/HorseyGameWeb\" title=\"Horsey Game\" class=\"w-full h-full border-0\" allow=\"autoplay; fullscreen; gamepad; pointer-lock\" allowfullscreen loading=\"lazy\"></iframe>"
+  },
+  {
+    "id": 906,
+    "name": "There Is No Game: Wrong Dimension",
+    "author": "dasher",
+    "category": "Puzzle & Strategy",
+    "tags": [
+      "wasm.rip",
+      "wasm",
+      "puzzle & strategy"
+    ],
+    "featured": false,
+    "file": "",
+    "coverFile": "",
+    "cover": "https://wasm.rip/img/ting-wd.jpg",
+    "githubUrl": "https://github.com/wasmdotrip",
+    "iframeSrc": "https://wasm.rip/files/ting-wd/index.html",
+    "iframe": "<iframe src=\"https://wasm.rip/files/ting-wd/index.html\" title=\"There Is No Game: Wrong Dimension\" class=\"w-full h-full border-0\" allow=\"autoplay; fullscreen; gamepad; pointer-lock\" allowfullscreen loading=\"lazy\"></iframe>"
+  },
+  {
+    "id": 907,
+    "name": "Meccha Chameleon",
+    "author": "crax",
+    "category": "Platform & Runner",
+    "tags": [
+      "wasm.rip",
+      "wasm",
+      "platform & runner"
+    ],
+    "featured": true,
+    "file": "",
+    "coverFile": "",
+    "cover": "https://wasm.rip/img/meccha-chameleon.webp",
+    "githubUrl": "https://github.com/wasmdotrip",
+    "iframeSrc": "https://wasm.rip/files/meccha-chameleon/index.html",
+    "iframe": "<iframe src=\"https://wasm.rip/files/meccha-chameleon/index.html\" title=\"Meccha Chameleon\" class=\"w-full h-full border-0\" allow=\"autoplay; fullscreen; gamepad; pointer-lock\" allowfullscreen loading=\"lazy\"></iframe>"
+  },
+  {
+    "id": 908,
+    "name": "Bloons TD 6",
+    "author": "sexyplankton",
+    "category": "Puzzle & Strategy",
+    "tags": [
+      "wasm.rip",
+      "wasm",
+      "puzzle & strategy"
+    ],
+    "featured": true,
+    "file": "",
+    "coverFile": "",
+    "cover": "https://wasm.rip/img/btd6.jpg",
+    "githubUrl": "https://github.com/wasmdotrip",
+    "iframeSrc": "https://wasm.rip/files/btd6/index.html",
+    "iframe": "<iframe src=\"https://wasm.rip/files/btd6/index.html\" title=\"Bloons TD 6\" class=\"w-full h-full border-0\" allow=\"autoplay; fullscreen; gamepad; pointer-lock\" allowfullscreen loading=\"lazy\"></iframe>"
+  },
+  {
+    "id": 909,
+    "name": "The Stanley Parable: Ultra Deluxe",
+    "author": "apollo",
+    "category": "Ports & 3D",
+    "tags": [
+      "wasm.rip",
+      "wasm",
+      "ports & 3d"
+    ],
+    "featured": false,
+    "file": "",
+    "coverFile": "",
+    "cover": "https://wasm.rip/img/stanley.jpg",
+    "githubUrl": "https://github.com/wasmdotrip",
+    "iframeSrc": "https://wasm.rip/files/stanley/index.html",
+    "iframe": "<iframe src=\"https://wasm.rip/files/stanley/index.html\" title=\"The Stanley Parable: Ultra Deluxe\" class=\"w-full h-full border-0\" allow=\"autoplay; fullscreen; gamepad; pointer-lock\" allowfullscreen loading=\"lazy\"></iframe>"
+  },
+  {
+    "id": 910,
+    "name": "Please, Don't Touch Anything 3D",
+    "author": "apollo",
+    "category": "Ports & 3D",
+    "tags": [
+      "wasm.rip",
+      "wasm",
+      "ports & 3d"
+    ],
+    "featured": false,
+    "file": "",
+    "coverFile": "",
+    "cover": "https://wasm.rip/img/pdta3d.jpg",
+    "githubUrl": "https://github.com/wasmdotrip",
+    "iframeSrc": "https://wasm.rip/files/pdta3d/index.html",
+    "iframe": "<iframe src=\"https://wasm.rip/files/pdta3d/index.html\" title=\"Please, Don't Touch Anything 3D\" class=\"w-full h-full border-0\" allow=\"autoplay; fullscreen; gamepad; pointer-lock\" allowfullscreen loading=\"lazy\"></iframe>"
+  },
+  {
+    "id": 911,
+    "name": "Mouthwashing",
+    "author": "apollo",
+    "category": "Ports & 3D",
+    "tags": [
+      "wasm.rip",
+      "wasm",
+      "ports & 3d"
+    ],
+    "featured": true,
+    "file": "",
+    "coverFile": "",
+    "cover": "https://wasm.rip/img/mouthwashing.jpg",
+    "githubUrl": "https://github.com/wasmdotrip",
+    "iframeSrc": "https://wasm.rip/files/mouthwashing/index.html",
+    "iframe": "<iframe src=\"https://wasm.rip/files/mouthwashing/index.html\" title=\"Mouthwashing\" class=\"w-full h-full border-0\" allow=\"autoplay; fullscreen; gamepad; pointer-lock\" allowfullscreen loading=\"lazy\"></iframe>"
+  },
+  {
+    "id": 912,
+    "name": "Roblox",
+    "author": "frogie's arcade",
+    "category": "Ports & 3D",
+    "tags": [
+      "nowgg.fun",
+      "roblox",
+      "cloud",
+      "multiplayer",
+      "sandbox",
+      "ports & 3d"
+    ],
+    "featured": true,
+    "file": "",
+    "coverFile": "",
+    "cover": "https://nowgg.fun/img/roadblock.png",
+    "githubUrl": "https://nowgg.fun/apps/a/19900/b.html",
+    "iframeSrc": "https://nowgg.fun/apps/a/19900/b.html",
+    "iframe": "<iframe src=\"https://nowgg.fun/apps/a/19900/b.html\" title=\"Roblox\" class=\"w-full h-full border-0\" allow=\"autoplay; fullscreen; gamepad; pointer-lock; clipboard-read; clipboard-write\" allowfullscreen loading=\"lazy\"></iframe>"
   }
 ]

@@ -49,8 +49,21 @@ export function GameTheaterModal({
     return () => window.removeEventListener('keydown', onKeyDown);
   }, [game, onClose]);
 
+  const isExternalGame = Boolean(
+    game && (game.iframeSrc.startsWith('http://') || game.iframeSrc.startsWith('https://'))
+  );
+
+  const externalHost = (() => {
+    if (!game || !isExternalGame) return 'external';
+    try {
+      return new URL(game.iframeSrc).hostname.replace(/^www\./, '');
+    } catch {
+      return 'external';
+    }
+  })();
+
   useEffect(() => {
-    if (!game || !IS_STANDALONE) {
+    if (!game || !IS_STANDALONE || isExternalGame || !game.file) {
       setStandaloneHtml(null);
       setStandaloneLoading(false);
       setStandaloneError(null);
@@ -154,7 +167,7 @@ export function GameTheaterModal({
                   className="text-xs truncate"
                   style={{ color: 'var(--text-muted)' }}
                 >
-                  {game.category} · {game.author} · {game.file}
+                  {game.category} · {game.author} · {game.file || externalHost}
                 </p>
               </div>
 
@@ -299,7 +312,7 @@ export function GameTheaterModal({
 
             {/* Active Game Iframe Surface */}
             <div className="relative flex-1 bg-black">
-              {IS_STANDALONE ? (
+              {IS_STANDALONE && !isExternalGame ? (
                 standaloneLoading ? (
                   <div className="w-full h-full flex items-center justify-center text-sm text-white/75">
                     loading {game.name.toLowerCase()} rn...
@@ -335,7 +348,7 @@ export function GameTheaterModal({
                   src={game.iframeSrc}
                   title={game.name}
                   className="w-full h-full border-0"
-                  allow="autoplay; fullscreen; gamepad; pointer-lock"
+                  allow="autoplay; fullscreen; gamepad; pointer-lock; clipboard-read; clipboard-write"
                   allowFullScreen
                 />
               )}

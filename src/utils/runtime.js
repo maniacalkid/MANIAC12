@@ -67,6 +67,9 @@ export async function probeBackendSupport() {
  * @returns {string}
  */
 export function getGameCoverUrl(game) {
+  if (game.cover.startsWith('http://') || game.cover.startsWith('https://')) {
+    return game.cover;
+  }
   if (IS_STANDALONE && game.coverFile) {
     return `https://raw.githubusercontent.com/gn-math/covers/main/${encodeURIComponent(game.coverFile)}`;
   }
