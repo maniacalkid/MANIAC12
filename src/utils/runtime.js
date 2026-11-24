@@ -1,11 +1,66 @@
 import { rankGameSearch } from './searchGames';
 
-export const IS_STANDALONE =
-  typeof window !== 'undefined' &&
-  (/** @type {any} */ (window).__MANIAC12_STANDALONE__ === true ||
-    window.location.protocol === 'file:' ||
-    window.location.protocol === 'about:' ||
-    window.location.protocol === 'blob:');
+const STATIC_HOST_SUFFIXES = [
+  '.github.io',
+  '.pages.dev',
+  '.netlify.app',
+  '.neocities.org',
+  '.surge.sh',
+  '.glitch.me',
+];
+
+function detectStaticEnvironment() {
+  if (typeof window === 'undefined') return false;
+  if (/** @type {any} */ (window).__MANIAC12_STANDALONE__ === true) return true;
+
+  const proto = window.location.protocol;
+  if (proto === 'file:' || proto === 'about:' || proto === 'blob:') return true;
+
+  const host = (window.location.hostname || '').toLowerCase();
+  return STATIC_HOST_SUFFIXES.some((suffix) => host === suffix.slice(1) || host.endsWith(suffix));
+}
+
+export let IS_STANDALONE = detectStaticEnvironment();
+
+/** @type {Set<(val: boolean) => void>} */
+const standaloneListeners = new Set();
+
+/**
+ * @param {(val: boolean) => void} listener
+ * @returns {() => void}
+ */
+export function subscribeStandalone(listener) {
+  standaloneListeners.add(listener);
+  return () => standaloneListeners.delete(listener);
+}
+
+let probedBackend = false;
+
+export async function probeBackendSupport() {
+  if (IS_STANDALONE || probedBackend || typeof window === 'undefined') {
+    return IS_STANDALONE;
+  }
+  probedBackend = true;
+
+  try {
+    const res = await fetch('./api/health', { cache: 'no-store' });
+    const contentType = res.headers.get('content-type') || '';
+    if (!res.ok || !contentType.includes('application/json')) {
+      throw new Error('static host detected');
+    }
+    const data = await res.json();
+    if (!data || data.ok !== true) {
+      throw new Error('not maniac12 express server');
+    }
+    return false;
+  } catch {
+    IS_STANDALONE = true;
+    for (const fn of standaloneListeners) {
+      fn(true);
+    }
+    return true;
+  }
+}
 
 /**
  * @param {import('../types').GameItem} game

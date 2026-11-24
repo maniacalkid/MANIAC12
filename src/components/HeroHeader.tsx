@@ -37,6 +37,7 @@ interface HeroHeaderProps {
   onApplyCatalogSearch: (query: string) => void;
   onOpenSearchModal: (mode?: 'games' | 'web', initialQuery?: string) => void;
   isReady?: boolean;
+  isStandalone?: boolean;
 }
 
 export function HeroHeader({
@@ -57,6 +58,7 @@ export function HeroHeader({
   onApplyCatalogSearch,
   onOpenSearchModal,
   isReady = true,
+  isStandalone = IS_STANDALONE,
 }: HeroHeaderProps) {
   const prefersReducedMotion = useReducedMotion();
   const activePreset =
@@ -409,9 +411,9 @@ export function HeroHeader({
                 <ArrowDownRight className="w-4 h-4" aria-hidden="true" />
               </a>
 
-              {!IS_STANDALONE && (
+              {!isStandalone && (
                 <a
-                  href="/maniac12-standalone.html"
+                  href="./maniac12-standalone.html"
                   download="maniac12.html"
                   className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl liquid-glass text-xs font-semibold transition-transform duration-150 hover:scale-[1.02] active:scale-[0.98] whitespace-nowrap shrink-0"
                   style={{ color: 'var(--text-primary)' }}

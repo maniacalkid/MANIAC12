@@ -13,7 +13,11 @@ import { RainBackground, detectDeviceCapabilityIssue } from './components/RainBa
 import { LoadingScreen } from './components/LoadingScreen';
 import { FpsCounter } from './components/FpsCounter';
 import { rankGameSearch } from './utils/searchGames';
-import { IS_STANDALONE } from './utils/runtime';
+import {
+  IS_STANDALONE,
+  probeBackendSupport,
+  subscribeStandalone,
+} from './utils/runtime';
 
 const GAMES: GameItem[] = rawGamesData as GameItem[];
 
@@ -69,6 +73,13 @@ export default function App() {
   const [searchModalMode, setSearchModalMode] = useState<'games' | 'web'>('games');
   const [searchModalQuery, setSearchModalQuery] = useState('');
   const [showLoadingScreen, setShowLoadingScreen] = useState(true);
+  const [isStandalone, setIsStandalone] = useState(IS_STANDALONE);
+
+  useEffect(() => {
+    const unsub = subscribeStandalone((val) => setIsStandalone(val));
+    void probeBackendSupport();
+    return unsub;
+  }, []);
 
   // Ambient rain state with automatic hardware/reduced-motion check
   const [rainDisableReason, setRainDisableReason] = useState<string | null>(() =>
@@ -352,6 +363,7 @@ export default function App() {
           onApplyCatalogSearch={handleApplyCatalogSearch}
           onOpenSearchModal={openSearchModal}
           isReady={!showLoadingScreen}
+          isStandalone={isStandalone}
         />
 
         {/* Recently Played Strip (when user has played games) */}
@@ -625,11 +637,11 @@ export default function App() {
               </a>{' '}
               · stored as json iframes fr
             </span>
-            {!IS_STANDALONE && (
+            {!isStandalone && (
               <>
                 <span aria-hidden="true">·</span>
                 <a
-                  href="/maniac12-standalone.html"
+                  href="./maniac12-standalone.html"
                   download="maniac12.html"
                   className="underline underline-offset-2 font-semibold"
                   style={{ color: 'var(--accent-primary)' }}

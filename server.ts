@@ -604,6 +604,10 @@ app.post('/api/chat', async (req, res) => {
   }
 });
 
+app.get('/api/health', (_req, res) => {
+  res.json({ ok: true, mode: 'server' });
+});
+
 // Serve downloadable single-file standalone HTML (bypasses Vite SPA fallback)
 app.get('/maniac12-standalone.html', (_req, res) => {
   const candidates = [

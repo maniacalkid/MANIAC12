@@ -10,7 +10,9 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const rootDir = path.resolve(__dirname, '..');
 const tmpDir = path.join(rootDir, '.tmp-standalone');
 const publicDir = path.join(rootDir, 'public');
+const docsDir = path.join(rootDir, 'docs');
 const outHtmlPath = path.join(publicDir, 'maniac12-standalone.html');
+const docsIndexPath = path.join(docsDir, 'index.html');
 
 async function buildStandaloneHtml() {
   fs.rmSync(tmpDir, { recursive: true, force: true });
@@ -84,12 +86,14 @@ async function buildStandaloneHtml() {
   );
 
   fs.mkdirSync(publicDir, { recursive: true });
+  fs.mkdirSync(docsDir, { recursive: true });
   fs.writeFileSync(outHtmlPath, singleHtml, 'utf-8');
+  fs.writeFileSync(docsIndexPath, singleHtml, 'utf-8');
   fs.rmSync(tmpDir, { recursive: true, force: true });
 
   const stats = fs.statSync(outHtmlPath);
   const kb = (stats.size / 1024).toFixed(1);
-  console.log(`Built standalone single-file HTML: ${outHtmlPath} (${kb} KB)`);
+  console.log(`Built standalone single-file HTML: ${outHtmlPath} & ${docsIndexPath} (${kb} KB)`);
 }
 
 buildStandaloneHtml().catch((err) => {
